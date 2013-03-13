@@ -54,6 +54,18 @@
             echo form::input('trunk[registry][outboundProxy]');
         ?>
         </div>
+
+        <div class="field">
+        <?php
+            echo form::label(array(
+                    'for' => 'trunk[registry][expireSeconds]',
+                    'hint' => 'Re-registration timer'
+                ),
+                'Expire Seconds:'
+            );        
+            echo form::input('trunk[registry][expireSeconds]');
+        ?>
+        </div>
     	
         <div class="field">
 	<?php

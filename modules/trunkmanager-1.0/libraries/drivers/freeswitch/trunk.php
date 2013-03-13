@@ -59,6 +59,15 @@ class FreeSwitch_Trunk_Driver extends FreeSwitch_Base_Driver
             {
                 $xml->deleteNode('/param[@name="outbound-proxy"]');
             }
+
+            if ($expireSeconds = arr::get($trunk, 'registry', 'expireSeconds'))
+            {
+                $xml->update('/param[@name="expire-seconds"]{@value="' .$expireSeconds . '"}');
+            }
+            else
+            {
+                $xml->deleteNode('/param[@name="expire-seconds"]');
+            }
         }
 
         $modified = $trunk->getModified(TRUE, TRUE);
