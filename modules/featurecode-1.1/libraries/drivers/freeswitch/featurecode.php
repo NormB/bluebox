@@ -207,7 +207,7 @@ XML;
             case 'hold_music':
                 $xmlText = <<<XML
 <action application="answer"/>
-<action application="playback" data="\$\${hold_music}"/>
+<action application="playback" data="$${hold_music}"/>
 XML;
                 break;
 
@@ -238,7 +238,7 @@ XML;
     <action application="set" data="res=\${callcenter_config(agent set state agent_\${agent_id} 'Waiting')}" />
     <action application="set" data="cc_warning_tone=tone_stream://%(200,0,500,600,700)"/>
     <action application="answer" />
-    <action application="playback" data="\$\${hold_music}"/>
+    <action application="playback" data="$${hold_music}"/>
     <action application="transfer" data="$num"/>
 
 XML;

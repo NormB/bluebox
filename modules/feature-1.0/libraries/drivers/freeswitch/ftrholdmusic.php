@@ -9,7 +9,7 @@ class FreeSwitch_ftrholdmusic_Driver extends FreeSwitch_Feature_Driver
         $xmlText = <<<XML
 
 <action application="answer"/>
-<action application="playback" data="\$\${hold_music}"/>
+<action application="playback" data="$${hold_music}"/>
 
 XML;
         $xml->replaceWithXml($xmlText);

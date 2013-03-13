@@ -51,7 +51,7 @@ class FeatureCode_1_2_0_Configure extends Bluebox_Configure
 		array('Echo test','','<action application="answer"/>\n<action application="echo"/>'),
 		array('Delayed Echo Test','','<action application="answer"/>\n<action application="delay_echo" data="1000"/>'),
 		array('Tone Test','Play a 2600hz Tone until the caller hangs up','<action application="answer"/>\n<action application="playback" data="tone_stream://%(1000,0,2600);loops=-1"/>'),
-		array('Hold Music','Play Music-on-hold until the caller hangs up','<action application="answer"/>\n<action application="playback" data="\$\${hold_music}"/>')
+		array('Hold Music','Play Music-on-hold until the caller hangs up','<action application="answer"/>\n<action application="playback" data="$${hold_music}"/>')
 	);
 	foreach ($featurecodes AS $fc) {
 		$cfc=new CustomFeatureCode();
